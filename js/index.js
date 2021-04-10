@@ -9,8 +9,7 @@ function inputMedicamento () {
     return medicamento }
 
 function incompatibilidades (enfermedad, medicamento) {
-    while (enfermedad && medicamento !== 'esc') {
-
+    
     switch (enfermedad, medicamento) {
         case "diabetes" && "betametasona":
             alert ('¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos')
@@ -28,7 +27,7 @@ function incompatibilidades (enfermedad, medicamento) {
             alert ('No se han encontrado incompatibilidades')
         }
     }
-}
+
 
 let enfermedad = inputEnfermedad()
 let medicamento = inputMedicamento()
