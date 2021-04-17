@@ -1,4 +1,6 @@
 
+//Funciones de toma de datos del usuario
+
 function inputNombre() {
     let nombre = prompt("Ingrese su nombre").toLowerCase()
     return nombre
@@ -10,10 +12,11 @@ function inputEnfermedad() {
 }
 
 function inputMedicamento() {
-    let medicamento = prompt("Ingrese un medicamento que consuma habitualmente").toLocaleLowerCase()
+    let medicamento = prompt("Ingrese un medicamento que consuma habitualmente").toLowerCase()
     return medicamento
 }
 
+//Mensajes de Alerta
 
 const messages = {
     diabeBeta: "¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos",
@@ -22,6 +25,8 @@ const messages = {
     hipertenDiclo: "¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente hipertenso. Trate de utilizar otras alternativas antiinflamatorias o consulte con su médico para usarlo adecuadamente",
     nullmessage: "No se han encontrado incompatibilidades"
 }
+
+//Función de Análisis de Incompatibilidad
 
 function incompatibilidades(enfermedad, medicamento) {
 
@@ -41,19 +46,35 @@ function incompatibilidades(enfermedad, medicamento) {
                 }
 }
 
-let nombre = inputNombre()
-let enfermedad = inputEnfermedad()
-let medicamento = inputMedicamento()
+// Función de Consulta y chequeo de incompatibilidad
 
-incompatibilidades(enfermedad, medicamento)
+let repetir = prompt('Quiere hacer una consulta?').toLowerCase()
+    
+function checkMed () {
+    
+    while ( repetir !== 'no') {
+        let nombre = inputNombre()
+        let enfermedad = inputEnfermedad()
+        let medicamento = inputMedicamento()
+                
+        incompatibilidades(enfermedad, medicamento)
 
-class Consulta {
-    constructor (nombre, enfermedad, medicamento) {
-        this.nombre = nombre,
-        this.enfermedad = enfermedad,
-        this.medicamento = medicamento
+        repetir = prompt (nombre + ' ¿quiere hacer otra consulta?')
+
+        class Consulta {
+            constructor (nombre, enfermedad, medicamento) {
+                this.nombre = nombre,
+                this.enfermedad = enfermedad,
+                this.medicamento = medicamento
+            }
         }
-}
-const Consultas = []
 
-Consultas.push (new Consulta (nombre, enfermedad, medicamento))
+        const Consultas = []
+
+        Consultas.push (new Consulta (nombre, enfermedad, medicamento))
+        
+        console.log (Consultas) 
+    }
+}
+
+checkMed ()
