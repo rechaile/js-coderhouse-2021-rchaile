@@ -1,85 +1,59 @@
 
-/*function inputEnfermedad () {
-    let enfermedad = prompt("Ingrese la enfermedad crónica que padece")
+function inputNombre() {
+    let nombre = prompt("Ingrese su nombre").toLowerCase()
+    return nombre
+}
+
+function inputEnfermedad() {
+    let enfermedad = prompt("Ingrese la enfermedad crónica que padece").toLowerCase()
     return enfermedad
-    }
+}
 
-function inputMedicamento () {
-    let medicamento = prompt('Ingrese un medicamento que consuma habitualmente')
-    return medicamento }
-
-function incompatibilidades (enfermedad, medicamento) {
-    
-    switch (enfermedad, medicamento) {
-        case "diabetes" && "betametasona":
-            alert ('¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos')
-            break
-        case "diabetes" && "diclofenac":
-            alert ('Precaución: El consumo de antiinflamatorios de forma crónica no está recomendado en personas diabéticas porque puede perjudicar la función renal')
-            break
-        case "hipertension" && "betametasona":
-            alert ('Precaución: El consumo de corticoides de forma crónica no está recomendado en personas hipertensas porque puede perjudicar la función renal del paciente')
-            break
-        case "hipertension" && "diclofenac":
-            alert ('¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente hipertenso. Trate de utilizar otras alternativas antiinflamatorias o consulte con su médico para usarlo adecuadamente')
-            break
-        default:
-            alert ('No se han encontrado incompatibilidades')
-        }
-    }
+function inputMedicamento() {
+    let medicamento = prompt("Ingrese un medicamento que consuma habitualmente").toLocaleLowerCase()
+    return medicamento
+}
 
 
+const messages = {
+    diabeBeta: "¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos",
+    diabeDiclo: "Precaución: El consumo de antiinflamatorios de forma crónica no está recomendado en personas diabéticas porque puede perjudicar la función renal",
+    hipertenBeta: "Precaución: El consumo de corticoides de forma crónica no está recomendado en personas hipertensas porque puede perjudicar la función renal del paciente",
+    hipertenDiclo: "¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente hipertenso. Trate de utilizar otras alternativas antiinflamatorias o consulte con su médico para usarlo adecuadamente",
+    nullmessage: "No se han encontrado incompatibilidades"
+}
+
+function incompatibilidades(enfermedad, medicamento) {
+
+    if (enfermedad === 'diabetes' && medicamento === 'betametasona') {
+        alert (messages.diabeBeta)
+    } else
+        if (enfermedad === 'diabetes' && medicamento === 'diclofenac') {
+            alert (messages.diabeDiclo)
+        } else
+            if (enfermedad === 'hipertension' && medicamento === 'betametasona') {
+                alert (messages.hipertenBeta)
+            } else
+                if (enfermedad === 'hipertension' && medicamento === 'diclofenac') {
+                    alert (messages.hipertenDiclo)
+                } else {
+                    alert (messages.nullmessage)
+                }
+}
+
+let nombre = inputNombre()
 let enfermedad = inputEnfermedad()
 let medicamento = inputMedicamento()
 
-incompatibilidades (enfermedad, medicamento)*/
+incompatibilidades(enfermedad, medicamento)
 
-
-
-const consulta = {
-    
-    enfermedad:     
-    function inputEnfermedad () {
-        let enfermedad = prompt("Ingrese la enfermedad crónica que padece")
-        return enfermedad
+class Consulta {
+    constructor (nombre, enfermedad, medicamento) {
+        this.nombre = nombre,
+        this.enfermedad = enfermedad,
+        this.medicamento = medicamento
         }
-    
-    medicamento: 
-    
-    function inputMedicamento () {
-        let medicamento = prompt('Ingrese un medicamento que consuma habitualmente')
-        return medicamento }
 }
+const Consultas = []
 
-function incompatibilidades ( consulta.enfermedad, consulta.medicamento ) {
-    
-    switch (consulta.enfermedad, consulta.medicamento) {
-        case "diabetes" && "betametasona":
-            alert ('¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos')
-            break
-        case "diabetes" && "diclofenac":
-            alert ('Precaución: El consumo de antiinflamatorios de forma crónica no está recomendado en personas diabéticas porque puede perjudicar la función renal')
-            break
-        case "hipertension" && "betametasona":
-            alert ('Precaución: El consumo de corticoides de forma crónica no está recomendado en personas hipertensas porque puede perjudicar la función renal del paciente')
-            break
-        case "hipertension" && "diclofenac":
-            alert ('¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente hipertenso. Trate de utilizar otras alternativas antiinflamatorias o consulte con su médico para usarlo adecuadamente')
-            break
-        default:
-            alert ('No se han encontrado incompatibilidades')
-        }
-    }
-
-    consulta.enfermedad ()
-    consulta.medicamento ()
-    incompatibilidades (consulta.enfermedad, consulta.medicamento)
-    
-function messageAlert () {
-    alert= ('messages')
-}
-
-    messages = {
-        diabetesBetametasona: '¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos'
-    }
-    
+Consultas.push (new Consulta (nombre, enfermedad, medicamento))
