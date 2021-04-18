@@ -1,3 +1,5 @@
+/**Estilos Generales**/
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
 
 * {
@@ -13,8 +15,8 @@ body {
 
 h1 {
     color: #000000;
-    font-style: normal;
-    font-weight: 700;
+    font-style:normal;
+    font-weight: 900;
     font-family: 'Poppins', sans-serif;
     font-size: 200%;
     padding: 16px;
@@ -29,4 +31,113 @@ p {
     font-size: 1rem;
     padding: 16px;
     text-align: center;
+}
+
+.parrafoIntro {
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 16px;
+    text-align:left;
+}
+
+/*Estilos navbar*/
+.navbar-brand {
+    color: #02754C;
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 16px;
+    text-align: center;
+
+}
+
+.nav-link {
+    color: #000000;
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 16px;
+    text-align: center;
+}
+
+/**Estilos Logo**/
+
+#logoMedicheck img:active {
+    transition: transform 2s ease-in-out;
+}
+
+#logoMedicheck img:hover {
+    transform: scale(1.1);
+}
+
+/**Estilos del footer**/
+
+.pie {
+    max-width: 100%;
+    margin:16px 0 0;
+    background: linear-gradient(-45deg, #02291B, #02754C, #19FFAD);
+    background-size: 200% 200%;
+    padding: 32px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
+    animation-name: footer-gradient;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+   }
+
+.pie p {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    }
+
+.pie i {
+    width: 36px;
+    transform: scale(1.5);
+    padding: 0;
+    margin:0;
+    color: white;
+    transition: color 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+
+.pie i:hover {
+    width: 36px;
+    transform: scale(1.7);
+    padding:0;
+    margin:0;
+    color: #ffd900;
+}
+
+.pie p {
+    margin:0;
+    padding:0;
+    }
+
+.pie a{
+    margin:0;
+    padding:0;
+
+}
+
+/** Animaciones**/
+@keyframes footer-gradient {
+    
+    0% {
+        background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

@@ -1,24 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medichek - chequeá tus medicamentos online</title>
-    <link rel="stylesheet" href="css/estilos.css"> 
-</head>
-<body>
-    <header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-    </header>
-    <main>
-        <h1>Medichek</h1>
-        <p>Chequea tus medicamentos y enterate de sus interacciones, efectos adversos y contraindicaciones</p>
-    </main>
-    <footer>
+        <title>Medichek - chequeá tus medicamentos online</title>
 
-    </footer>
+        <!-- Iconos Flaticon -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <script src="js/index.js"></script>
-</body>
+        <!-- Animaciones Wow -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+        <!-- Estilos propios -->
+        <link rel="stylesheet" href="css/estilos.css"> 
+
+        <!-- Estilos Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <!-- Menu Navbar -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <a class="navbar-brand" href="#">Medicheck</a>
+                            
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>                        
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                                <div class="navbar-nav">
+                                    <a class="nav-link" href="#">Incompatibilidades</a>
+                                    <a class="nav-link" href="#">Interacciones</a>
+                                    <a class="nav-link" href="#">Quiénes somos</a>
+                                    <a class="nav-link" href="#">Ayuda</a>
+                                </div>
+                            </div>
+                        </div>  
+                    </div> 
+                </div> 
+            </nav>
+              
+        </header>
+        
+        <main>
+            <div class="container">
+
+                <!-- Logo de Medicheck -->
+                
+                <div class="row justify-content-center align-items-center my-8">
+                    <figure id="logoMedicheck" class="figure">
+                        <img class="rounded mx-auto d-block" src="Imagenes/Logo Medicheck.png" alt="logo Medicheck">
+                    </figure>
+                    <p>Chequea tus medicamentos y enterate de sus interacciones, efectos adversos y contraindicaciones</p>
+                </div>
+
+                <!-- Introducción -->
+
+                <section class="row justify-content-center align-items-center my-8">
+                    <div class="col-md-6 wow animate__animated animate__slideInLeft">
+                        <h2>Consultá tus medicamentos</h2>
+                        <p class="parrafoIntro">Siempre te preguntaste si podes tomar algún medicamento debido a tus enfermedades, o si estás tomando otros medicamentos no sabes si tomarlos juntos te puede hacer mal. En Medicheck, vas a poder chequear las Incompatibilidades o contraindicaciones que tienen los medicamentos en caso que tengas una enfermedad pre-existeste y además vas a poder chequear si hay incompatibilidades entre ellos</p>
+                    </div>
+                    <div class="col-md-6 wow animate__animated animate__slideInRight">
+                        <figure class="figure">
+                            <img src="https://cdn.aarp.net/content/dam/aarp/health/drugs_supplements/2020/03/1140-pharmacist-patient-esp.imgcache.rev.web.700.399.jpg" class="img-fluid" alt="farmaceutico hablando">
+                        </figure>    
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        <footer class="pie">
+            <div class="row row-cols-2 justify-content-around align-items-center">
+                <section class="col-12 col-lg-9 row row-cols-2 justify-content-around align-items-center">
+                    
+                    <!-- Info email -->
+                    
+                    <div class="col-12 col-sm-6 row row-cols-2 justify-content-around align-items-center mt-4">
+                        <i class="col-1 fa fa-envelope"></i>
+                        <p class="col-11">Email: info@medichek.com</p>
+                    </div>    
+                    
+                     <!-- Info Teléfono -->
+                    
+                     <div class="col-12 col-sm-6 row row-cols-2 justify-content-between align-items-center mt-4">
+                        <a href="#" class="col-1">
+                            <i class="fa fa-whatsapp"></i>
+                        </a>
+                        
+                        <p class="col-11">Tel: XXX XXX XXXX</p>
+                    </div>
+                </section>
+
+                <section class="col-12 col-lg-3 row row-cols-2 justify-content-end align-items-center mt-4">
+
+                    <!-- Info Redes Sociales -->
+                    <div class="col-8 col-sm-9">
+                        <p class="text-right">Redes Sociales</p>
+                    </div>    
+                    
+                    <div class="col-4 col-sm-3 row row-cols-2">
+                        <a href="#" class="col-6">
+                            <i class="fa fa-facebook  ml-2"></i>
+                        </a>
+                        
+                        <a href="#" class="col-6">
+                            <i class="fa fa-instagram  ml-2"></i>
+                        </a>
+                    </div>
+                </section> 
+            </div>
+        </footer>
+
+        <!-- Script Simulador -->
+
+        <script src="js/index.js"></script>
+
+        <!--Script WOW-->
+
+        <script src="js/wow.min.js"></script>
+        <script>
+        new WOW().init();
+        </script>
+
+        <!-- Script Bootstrap-->
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    </body>
 </html>
