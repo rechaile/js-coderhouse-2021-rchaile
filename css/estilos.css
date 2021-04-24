@@ -18,8 +18,19 @@ h1 {
     font-style:normal;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
-    font-size: 200%;
+    font-size: 24px;
     padding: 16px;
+    text-align: center;
+}
+
+.title2 {
+    color: #02291B;
+    font-style:normal;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    padding: 16px;
+    margin: 0;
     text-align: center;
 }
 
@@ -63,6 +74,85 @@ p {
     font-size: 1rem;
     padding: 16px;
     text-align: center;
+}
+
+/**Estilos del Main Formulario de Contacto**/
+
+.formulario {
+    background-color: #02754C;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 16px 20vw 64px 20vw ;
+    
+    }
+
+.formulario h3 {
+    color:#ffffff;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px;
+    }
+
+.formulario input {
+    width: 200px;
+    margin: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    border: none;
+    }
+
+.formulario label{
+    display: block;
+    padding: 8px;
+}
+
+
+.formulario .button {
+    display: block;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    border: none;
+
+}
+
+.formulario .button:active {
+    display: block;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    color:#02291B;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffd900;
+    border: none;
+
+}
+
+label {
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 8px;
 }
 
 /**Estilos Logo**/

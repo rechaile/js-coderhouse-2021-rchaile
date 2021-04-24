@@ -40,8 +40,8 @@
                         <div class="col d-flex justify-content-center">
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                                 <div class="navbar-nav">
-                                    <a class="nav-link" href="#">Incompatibilidades</a>
-                                    <a class="nav-link" href="#">Interacciones</a>
+                                    <a class="nav-link" href="#form-incompatibilidad">Incompatibilidades</a>
+                                    <a class="nav-link" href="#form-interaccion">Interacciones</a>
                                     <a class="nav-link" href="#">Quiénes somos</a>
                                     <a class="nav-link" href="#">Ayuda</a>
                                 </div>
@@ -69,13 +69,56 @@
 
                 <section class="row justify-content-center align-items-center my-8">
                     <div class="col-md-6 wow animate__animated animate__slideInLeft">
-                        <h2>Consultá tus medicamentos</h2>
+                        <h2 class="title2">Consultá tus medicamentos</h2>
                         <p class="parrafoIntro">Siempre te preguntaste si podes tomar algún medicamento debido a tus enfermedades, o si estás tomando otros medicamentos no sabes si tomarlos juntos te puede hacer mal. En Medicheck, vas a poder chequear las Incompatibilidades o contraindicaciones que tienen los medicamentos en caso que tengas una enfermedad pre-existeste y además vas a poder chequear si hay incompatibilidades entre ellos</p>
                     </div>
                     <div class="col-md-6 wow animate__animated animate__slideInRight">
                         <figure class="figure">
                             <img src="https://cdn.aarp.net/content/dam/aarp/health/drugs_supplements/2020/03/1140-pharmacist-patient-esp.imgcache.rev.web.700.399.jpg" class="img-fluid" alt="farmaceutico hablando">
                         </figure>    
+                    </div>
+                </section>
+
+                <!-- Formulario de Incompatibilidades-->
+                <section class="row justify-content-center align-items-center my-8">
+                    
+                    
+                        <h2 class="title2">Medicheck - Incompatibilidades</h2>
+                        <figure id="logo-incompatibilidad" class="figure">
+                            <img class="rounded mx-auto d-block" src="Imagenes/Icon incompat.png" alt="logo Incompatibilidades">
+                        </figure>
+                    <div class="col-md-12">
+                        <form action="#" method="GET"  id="form-incompatibilidad" class="formulario">
+                            <h3>Chequeá la incompatibilidad de un medicamento:</h3>
+                            <label for="nombre">Nombre y Apellido: </label>
+                            <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" id="nombre" required> 
+                        
+                            <label for="enfermedad">Ingresá la enfermedad que querés consultar:</label>
+                            <input type="text" name="enfermedad" placeholder="ej: diabetes" id="enfermedad" required>
+                        
+                            <label for="medicamento">Ingresá el medicamento que querés consultar: </label>
+                            <input type="text" name="medicamento" placeholder="ej: diclofenac" id="medicamento" required>
+
+                            <input id="btn-incompatibilidad" class="button" type="submit" value="Chequear">
+                    
+                        </form>
+
+                    </div>
+                <!-- Formulario de Interacciones -->
+                    <div class="col-md-12">
+                        <h2 class="title2">Medicheck - Interacciones</h2>
+                        <form action="#" method="GET"  id="form-interaccion" class="formulario">
+                            <h3>Chequeá las interacciones entre dos medicamentos:</h3>
+                                                
+                            <label for="medicamento1">Ingresá el medicamento que querés consultar:</label>
+                            <input type="text" name="medicamento1" placeholder="ej: betametasona" id="medicamento1" required>
+                        
+                            <label for="medicamento2">Ingresá otro medicamento que querés consultar: </label>
+                            <input type="text" name="medicamento2" placeholder="ej: diclofenac" id="medicamento2" required>
+
+                            <input id="btn-interaccion" class="button" type="submit" value="Chequear">
+                        </form>
+
                     </div>
                 </section>
             </div>
