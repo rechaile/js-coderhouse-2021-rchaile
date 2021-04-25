@@ -1,21 +1,4 @@
 
-//Funciones de toma de datos del usuario
-
-function inputNombre() {
-    let nombre = prompt("Ingrese su nombre").toLowerCase()
-    return nombre
-}
-
-function inputEnfermedad() {
-    let enfermedad = prompt("Ingrese la enfermedad crónica que padece").toLowerCase()
-    return enfermedad
-}
-
-function inputMedicamento() {
-    let medicamento = prompt("Ingrese un medicamento que consuma habitualmente").toLowerCase()
-    return medicamento
-}
-
 //Mensajes de Alerta
 
 const messages = {
@@ -32,58 +15,75 @@ const messages = {
     nullmessage: "No se han encontrado incompatibilidades"
 }
 
-//Función de Análisis de Incompatibilidad
 
-function incompatibilidades(enfermedad, medicamento) {
+// Storage y creación de array Consultas
 
-    if (enfermedad === 'diabetes' && medicamento === 'betametasona') {
-        alert (messages.diabeBeta)
-    } else
-        if (enfermedad === 'diabetes' && medicamento === 'diclofenac') {
-            alert (messages.diabeDiclo)
-        } else
-            if (enfermedad === 'hipertension' && medicamento === 'betametasona') {
-                alert (messages.hipertenBeta)
-            } else
-                if (enfermedad === 'hipertension' && medicamento === 'diclofenac') {
-                    alert (messages.hipertenDiclo)
-                }   else
-                      if (enfermedad === 'diabetes' && medicamento === 'furosemida') {
-                            alert (messages.diabFuro)
-                        }   else {
-                                alert (messages.nullmessage)
-                            }
-}
-
-// Función de Consulta y chequeo de incompatibilidad
-
-let repetir = prompt('Quiere hacer una consulta?').toLowerCase()
-    
-function checkMed () {
-    
-    while ( repetir !== 'no') {
-        let nombre = inputNombre()
-        let enfermedad = inputEnfermedad()
-        let medicamento = inputMedicamento()
-                
-        incompatibilidades(enfermedad, medicamento)
-
-        repetir = prompt (nombre + ' ¿quiere hacer otra consulta?')
-
-        class Consulta {
-            constructor (nombre, enfermedad, medicamento) {
-                this.nombre = nombre,
-                this.enfermedad = enfermedad,
-                this.medicamento = medicamento
-            }
-        }
-
-        const Consultas = []
-
-        Consultas.push (new Consulta (nombre, enfermedad, medicamento))
-        
-        console.log (Consultas) 
+class Consulta {
+    constructor (nombre, enfermedad, medicamento) {
+        this.nombre = nombre,
+        this.enfermedad = enfermedad,
+        this.medicamento = medicamento
     }
 }
 
-checkMed ()
+let consultas = JSON.parse (localStorage.getItem('consultas'))
+
+if (!consultas) {
+    consultas = []
+}
+
+const create = (Consulta) => {
+            consultas.push (Consulta)
+        }
+
+//Toma de input de formulario de Incompatibilidad
+
+const formIncompatibilidad = document.getElementById('form-incompatibilidad')
+
+const inputNombre = document.getElementById('input-nombre')
+
+const inputEnfermedad = document.getElementById('input-enfermedad')
+
+const inputMedicamento = document.getElementById('input-medicamento')
+
+//Eventos de Formulario Incompatibilidad y analisis de resultados
+
+formIncompatibilidad.addEventListener('submit', ( ) => {
+    
+    //Valores de inputs
+
+    const nombre = inputNombre.value     
+    const enfermedad = inputEnfermedad.value
+    const medicamento = inputMedicamento.value
+
+    //Objeto consulta
+    const consulta = new Consulta (nombre, enfermedad, medicamento)
+    create (consulta)
+
+    localStorage.setItem('consultas', JSON.stringify(consultas))
+
+    //Función de Análisis de Incompatibilidad
+
+    function incompatibilidades(enfermedad, medicamento) {
+
+        if (enfermedad === 'diabetes' && medicamento === 'betametasona') {
+            alert (messages.diabeBeta)
+        } else
+            if (enfermedad === 'diabetes' && medicamento === 'diclofenac') {
+                alert (messages.diabeDiclo)
+            } else
+                if (enfermedad === 'hipertension' && medicamento === 'betametasona') {
+                    alert (messages.hipertenBeta)
+                } else
+                    if (enfermedad === 'hipertension' && medicamento === 'diclofenac') {
+                        alert (messages.hipertenDiclo)
+                    }   else
+                        if (enfermedad === 'diabetes' && medicamento === 'furosemida') {
+                                alert (messages.diabFuro)
+                            }   else {
+                                    alert (messages.nullmessage)
+                                }
+    }
+
+    incompatibilidades (enfermedad, medicamento)
+    })
