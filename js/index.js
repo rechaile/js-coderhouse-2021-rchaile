@@ -42,9 +42,7 @@ const formIncompatibilidad = document.getElementById('form-incompatibilidad')
 
 const inputNombre = document.getElementById('input-nombre')
 
-
 const inputEnfermedad = document.getElementById('input-enfermedad')
-
 
 const inputMedicamento = document.getElementById('input-medicamento')
 
@@ -80,9 +78,12 @@ formIncompatibilidad.addEventListener('submit', (event) => {
     
     //Valores de inputs
 
-    const nombre = inputNombre.value     
-    const enfermedad = inputEnfermedad.value
-    const medicamento = inputMedicamento.value
+    const nombre = inputNombre.value.toLowerCase()
+       
+    const enfermedad = inputEnfermedad.value.toLowerCase()
+    
+    const medicamento = inputMedicamento.value.toLowerCase()
+  
 
     //Objeto consulta
     const consulta = new Consulta (nombre, enfermedad, medicamento)
