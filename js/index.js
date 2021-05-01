@@ -46,27 +46,37 @@ const inputEnfermedad = document.getElementById('input-enfermedad')
 
 const inputMedicamento = document.getElementById('input-medicamento')
 
+const modalIncompatibilidad = document.getElementById ('alert-incompatibilidad')
+
+const alertMessage = document.getElementById ('alert-message')
+
+const verModal = () => {
+    modalIncompatibilidad.classList.toggle ('modal-active')
+}
+
+
+   
 
 //Función de Análisis de Incompatibilidad
 
 function incompatibilidades(enfermedad, medicamento) {
 
     if (enfermedad === 'diabetes' && medicamento === 'betametasona') {
-        alert (messages.diabeBeta)
+        alertMessage.innerText = messages.diabeBeta
     } else
         if (enfermedad === 'diabetes' && medicamento === 'diclofenac') {
-            alert (messages.diabeDiclo)
+            alertMessage.innerText = messages.diabeDiclo
         } else
             if (enfermedad === 'hipertension' && medicamento === 'betametasona') {
-                alert (messages.hipertenBeta)
+                alertMessage.innerText = messages.hipertenBeta
             } else
                 if (enfermedad === 'hipertension' && medicamento === 'diclofenac') {
-                    alert (messages.hipertenDiclo)
+                    alertMessage.innerText = messages.hipertenDiclo
                 }   else
                     if (enfermedad === 'diabetes' && medicamento === 'furosemida') {
-                            alert (messages.diabFuro)
+                        alertMessage.innerText = messages.diabFuro
                         }   else {
-                                alert (messages.nullmessage)
+                            alertMessage.innerText = messages.nullmessage
                             }
 }
 
@@ -92,9 +102,13 @@ formIncompatibilidad.addEventListener('submit', (event) => {
     localStorage.setItem('consultas', JSON.stringify(consultas))
 
     incompatibilidades (enfermedad, medicamento)
-    
+
+    verModal()
+
     inputNombre.value = 'Ingresa tu nombre completo'
     inputEnfermedad.value = 'ej: diabetes'
     inputMedicamento.value = 'ej: diclofenac'
 
     })
+
+    

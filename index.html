@@ -50,10 +50,9 @@
                     </div> 
                 </div> 
             </nav>
-              
         </header>
         
-        <main>
+        <main id='contenedor-simulador'>
             <div class="container">
 
                 <!-- Logo de Medicheck -->
@@ -85,7 +84,6 @@
                         <h2 class="title2">Medicheck - Incompatibilidades</h2>
                         
                         <img class="rounded mx-auto d-block logo-incompatibilidad" src="Imagenes/Icon incompat.png" alt="logo Incompatibilidades">
-                        
                     </div>   
 
                     <div class="col-md-12">
@@ -101,10 +99,9 @@
                             <input type="text" name="medicamento" placeholder="ej: diclofenac" id="input-medicamento" required>
 
                             <input id="btn-incompatibilidad" class="button" type="submit" value="Chequear">
-                    
                         </form>
-
                     </div>
+
                 <!-- Formulario de Interacciones -->
                     <div>
                         <h2 class="title2">Medicheck - Interacciones</h2>
@@ -123,25 +120,21 @@
                             <label for="medicamento2">Ingresá otro medicamento que querés consultar: </label>
                             <input type="text" name="medicamento2" placeholder="ej: diclofenac" id="medicamento2" required>
 
-                            <input id="btn-interaccion" class="button" type="submit" value="Chequear" data-toggle="modal" data-target="modal-interaccion">
+                            <input id="btn-interaccion" class="button" type="submit" value="Chequear">
                         </form>
                     </div>
                 </section>
+            </div>
 
-                <!-- Modal de Mensaje -->
-                <div class="modal fade" id="modal-interaccion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h2 class="modal-title" id="exampleModalLabel">¡Atención!</h2>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p id="alert-message">Texto de alerta</p>
-                            </div>
-                        </div>
+            <div class='modal'id='alert-incompatibilidad'>
+                <div id='modal-incompatibilidad'>
+                    <div class='modalHeader row'>
+                        <h3 class='modalHitle col-md-10'>¡Alerta!</h3>
+                        <button class='col-md-2' id='modal-cerrar'><i class="fa fa-times-circle fa-2x"></i></button>
+                    </div>
+                
+                    <div id='modal-body'>
+                        <p id='alert-message'>Mensaje de prueba</p>
                     </div>
                 </div>
             </div>
