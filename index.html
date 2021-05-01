@@ -123,11 +123,27 @@
                             <label for="medicamento2">Ingresá otro medicamento que querés consultar: </label>
                             <input type="text" name="medicamento2" placeholder="ej: diclofenac" id="medicamento2" required>
 
-                            <input id="btn-interaccion" class="button" type="submit" value="Chequear">
+                            <input id="btn-interaccion" class="button" type="submit" value="Chequear" data-toggle="modal" data-target="modal-interaccion">
                         </form>
-
                     </div>
                 </section>
+
+                <!-- Modal de Mensaje -->
+                <div class="modal fade" id="modal-interaccion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalLabel">¡Atención!</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="alert-message">Texto de alerta</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         
