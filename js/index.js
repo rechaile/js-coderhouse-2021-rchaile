@@ -50,8 +50,16 @@ const modalIncompatibilidad = document.getElementById ('alert-incompatibilidad')
 
 const alertMessage = document.getElementById ('alert-message')
 
+const cerrarModal = document.getElementById ('modal-cerrar')
+
 const verModal = () => {
     modalIncompatibilidad.classList.toggle ('modal-active')
+}
+
+const cerrarVentana = () => {
+    cerrarModal.addEventListener ('click', ()=> {
+        modalIncompatibilidad.classList.toggle ('modal-active')
+    })
 }
 
 
@@ -110,5 +118,7 @@ formIncompatibilidad.addEventListener('submit', (event) => {
     inputMedicamento.value = 'ej: diclofenac'
 
     })
+
+    cerrarVentana()   
 
     

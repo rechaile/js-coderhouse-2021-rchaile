@@ -195,7 +195,29 @@ label {
     min-width: 500px;
     padding: 20px;
     margin-top: -20vh;
+    margin-left: 60vh;
+    margin-right: 60vh;
     transition: all .5s;
+}
+
+#modal-incompatibilidad p {
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 16px;
+    text-align:left;
+}
+
+#modal-incompatibilidad h3 {
+    color: #02291B;
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    padding: 16px;
+    text-align:left;
 }
 
 #modal-cerrar {
