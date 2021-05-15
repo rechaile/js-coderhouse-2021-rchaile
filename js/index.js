@@ -1,4 +1,3 @@
-
 //Mensajes de Alerta
 
 const messages = {
@@ -36,33 +35,15 @@ const create = (Consulta) => {
             consultas.push (Consulta)
         }
 
-//Toma de input de formulario de Incompatibilidad
-
-const formIncompatibilidad = document.getElementById('form-incompatibilidad')
-
-const inputNombre = document.getElementById('input-nombre')
-
-const inputEnfermedad = document.getElementById('input-enfermedad')
-
-const inputMedicamento = document.getElementById('input-medicamento')
-
-const modalIncompatibilidad = document.getElementById ('alert-incompatibilidad')
-
-const alertMessage = document.getElementById ('alert-message')
-
-const cerrarModal = document.getElementById ('modal-cerrar')
-
 const verModal = () => {
-    modalIncompatibilidad.classList.toggle ('modal-active')
+    $("#alert-incompatibilidad").toggleClass('modal-active')
 }
 
 const cerrarVentana = () => {
-    cerrarModal.addEventListener ('click', ()=> {
-        modalIncompatibilidad.classList.toggle ('modal-active')
+    $("#modal-cerrar").on('click', ()=> {
+        $("#alert-incompatibilidad").toggleClass('modal-active')
     })
 }
-
-
    
 
 //Función de Análisis de Incompatibilidad
@@ -70,37 +51,37 @@ const cerrarVentana = () => {
 function incompatibilidades(enfermedad, medicamento) {
 
     if (enfermedad === 'diabetes' && medicamento === 'betametasona') {
-        alertMessage.innerText = messages.diabeBeta
+        $("#alert-message").text(messages.diabeBeta)
     } else
         if (enfermedad === 'diabetes' && medicamento === 'diclofenac') {
-            alertMessage.innerText = messages.diabeDiclo
+            $("#alert-message").text(messages.diabeDiclo)
         } else
             if (enfermedad === 'hipertension' && medicamento === 'betametasona') {
-                alertMessage.innerText = messages.hipertenBeta
+                $("#alert-message").text(messages.hipertenBeta)
             } else
                 if (enfermedad === 'hipertension' && medicamento === 'diclofenac') {
-                    alertMessage.innerText = messages.hipertenDiclo
+                    $("#alert-message").text(messages.hipertenDiclo)
                 }   else
                     if (enfermedad === 'diabetes' && medicamento === 'furosemida') {
-                        alertMessage.innerText = messages.diabFuro
+                        $("#alert-message").text(messages.diabFuro)
                         }   else {
-                            alertMessage.innerText = messages.nullmessage
+                            $("#alert-message").text(messages.nullmessage)
                             }
 }
 
 //Eventos de Formulario Incompatibilidad y analisis de resultados
 
-formIncompatibilidad.addEventListener('submit', (event) => {
+$("#form-incompatibilidad").on('submit', (event) => {
 
     event.preventDefault()
     
     //Valores de inputs
 
-    const nombre = inputNombre.value.toLowerCase()
+    const nombre = $("#input-nombre").val().toLowerCase()
        
-    const enfermedad = inputEnfermedad.value.toLowerCase()
+    const enfermedad = $("#input-enfermedad").val().toLowerCase()
     
-    const medicamento = inputMedicamento.value.toLowerCase()
+    const medicamento = $("#input-medicamento").val().toLowerCase()
   
 
     //Objeto consulta
@@ -113,9 +94,9 @@ formIncompatibilidad.addEventListener('submit', (event) => {
 
     verModal()
 
-    inputNombre.value = 'Ingresa tu nombre completo'
-    inputEnfermedad.value = 'ej: diabetes'
-    inputMedicamento.value = 'ej: diclofenac'
+    $("#input-nombre").val('Ingresa tu nombre completo') 
+    $("#input-enfermedad").val('ej: diabetes') 
+    $("#input-medicamento").val('ej: diclofenac')
 
     })
 
