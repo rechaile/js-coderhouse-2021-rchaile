@@ -123,6 +123,9 @@ p {
 }
 
 /**Estilos del Main Formulario de Contacto**/
+.forms{
+    opacity: 0;
+}
 
 .formulario {
     background-color: #02754C;
@@ -155,6 +158,21 @@ p {
     background-color: whitesmoke;
     border: none;
     }
+
+.input-error {
+    width: 200px;
+    margin: 16px;
+    padding: 8px;
+    border-radius: 8px;
+    color: rgba(0, 0, 0, 0.6);
+    font-style: normal;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    background-color: whitesmoke;
+    border:1px solid red;
+
+}
 
 .formulario label{
     display: block;
@@ -366,13 +384,13 @@ label {
     }
 
     .menu-show {
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: flex-end;
         justify-content: center;
     }
     .menu-hide {
-       display:none;        
+       display:none;
     }
     
     .nav-item {
@@ -401,4 +419,5 @@ label {
         
         
         }
+   
 }

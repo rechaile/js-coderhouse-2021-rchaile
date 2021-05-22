@@ -1,27 +1,13 @@
-//Efectos
-import {fadeLogo, hola1, slideFoto, slideIncompatibilidad, slideParrafo} from "./efectos.js"
 
+import {fadeLogo, slideFoto, slideForms, slideParrafo, abrirMenu} from "./efectos.js"
+import {messages} from "./mensajes.js"
+
+//Animaciones
 fadeLogo()
 slideParrafo()
 slideFoto()
-slideFoms()
-
-//Mensajes de Alerta
-
-const messages = {
-    diabeBeta: "¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos",
-    
-    diabeDiclo: "Precaución: El consumo de antiinflamatorios de forma crónica no está recomendado en personas diabéticas porque puede perjudicar la función renal",
-
-    diabFuro: "¡Cuidado! el consumo de diuréticos como la furosemida en personas diabéticas puede causar desequilibrios peligrosos en la hidratación y llevar al colapso. Esta contrainidicado en pacientes diabéticos",
-    
-    hipertenBeta: "Precaución: El consumo de corticoides de forma crónica no está recomendado en personas hipertensas porque puede perjudicar la función renal del paciente",
-    
-    hipertenDiclo: "¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente hipertenso. Trate de utilizar otras alternativas antiinflamatorias o consulte con su médico para usarlo adecuadamente",
-
-    nullmessage: "No se han encontrado incompatibilidades"
-}
-
+slideForms()
+abrirMenu()
 
 // Storage y creación de array Consultas
 
@@ -72,8 +58,8 @@ function incompatibilidades(enfermedad, medicamento) {
                 }   else
                     if (enfermedad === 'diabetes' && medicamento === 'furosemida') {
                         $("#alert-message").text(messages.diabFuro)
-                        }   else {
-                            $("#alert-message").text(messages.nullmessage)
+                        }  else {
+                                $("#alert-message").text(messages.nullmessage)
                             }
 }
 
@@ -91,7 +77,6 @@ $("#form-incompatibilidad").on('submit', (event) => {
     
     const medicamento = $("#input-medicamento").val().toLowerCase()
   
-
     //Objeto consulta
     const consulta = new Consulta (nombre, enfermedad, medicamento)
     create (consulta)
@@ -109,13 +94,5 @@ $("#form-incompatibilidad").on('submit', (event) => {
     })
 
     cerrarVentana()   
-
-//Abrir y cerrar menu
-
-$("#menu-button").on('click', ()=> {
-    $("#menu-bar").toggleClass("menu-hide")
-})
-
-hola1 ()
 
 
