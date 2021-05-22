@@ -44,7 +44,11 @@ p {
     text-align: center;
 }
 
-.parrafoIntro {
+#parrafoIntro {
+    position: relative;
+    display: none;
+}
+#parrafoIntro p {
     color: #000000;
     font-style: normal;
     font-weight: 400;
@@ -52,6 +56,11 @@ p {
     font-size: 1rem;
     padding: 16px;
     text-align:left;
+}
+
+#foto-farma {
+    position: relative;
+    display: none;
 }
 
 /*Estilos navbar*/
@@ -193,6 +202,10 @@ label {
 }
 
 /**Estilos Logo**/
+
+#logoMedicheck{
+    display: none;
+}
 
 #logoMedicheck img:active {
     transition: transform 2s ease-in-out;
@@ -367,7 +380,7 @@ label {
         font-style: normal;
         font-weight: 900;
         font-family: 'Poppins', sans-serif;
-        font-size: 1rem;
+        font-size: 14px;
         padding: 8px;
         text-align: right;
         text-decoration: none;

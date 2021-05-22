@@ -14,9 +14,9 @@
         <!-- Script JQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <!-- Animaciones Wow -->
+        <!-- Animaciones Wow 
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">-->
 
         <!-- Estilos propios -->
         <link rel="stylesheet" href="css/estilos.css"> 
@@ -40,9 +40,9 @@
                 
                 
                 <div class="col-12 col-md-8 cols-col-3 menu-hide menu-show" id="menu-bar">
-                    <a class="nav-item col-4 col-md-4" href="#form-incompatibilidad">Incompatibilidades</a>
-                    <a class="nav-item col-4 col-md-4" href="#form-interaccion">Interacciones</a>
-                    <a class="nav-item col-4 col-md-4" href="#">Ayuda</a>
+                    <a class="nav-item col-6 col-md-4" href="#form-incompatibilidad">Incompatibilidades</a>
+                    <a class="nav-item col-6 col-md-4" href="#form-interaccion">Interacciones</a>
+                    <a class="nav-item col-6 col-md-4" href="#">Ayuda</a>
                 </div>
             </nav>
             
@@ -55,8 +55,8 @@
 
                 <!-- Logo de Medicheck -->
                 
-                <div class="row justify-content-center align-items-center my-8">
-                    <figure id="logoMedicheck" class="figure">
+                <div class="row justify-content-center align-items-center my-8" id="logoMedicheck"> 
+                    <figure  class="figure">
                         <img class="rounded mx-auto d-block" src="Imagenes/Logo Medicheck.png" alt="logo Medicheck">
                     </figure>
                     <p>Chequea tus medicamentos y enterate de sus interacciones, efectos adversos y contraindicaciones</p>
@@ -65,11 +65,11 @@
                 <!-- Introducción -->
 
                 <section class="row justify-content-center align-items-center my-8">
-                    <div class="col-md-6 wow animate__animated animate__slideInLeft">
+                    <div class="col-md-6 wow animate__animated animate__slideInLeft" id="parrafoIntro">
                         <h2 class="title2">Consultá tus medicamentos</h2>
-                        <p class="parrafoIntro">Siempre te preguntaste si podes tomar algún medicamento debido a tus enfermedades, o si estás tomando otros medicamentos no sabes si tomarlos juntos te puede hacer mal. En Medicheck, vas a poder chequear las Incompatibilidades o contraindicaciones que tienen los medicamentos en caso que tengas una enfermedad pre-existeste y además vas a poder chequear si hay incompatibilidades entre ellos</p>
+                        <p>Siempre te preguntaste si podes tomar algún medicamento debido a tus enfermedades, o si estás tomando otros medicamentos no sabes si tomarlos juntos te puede hacer mal. En Medicheck, vas a poder chequear las Incompatibilidades o contraindicaciones que tienen los medicamentos en caso que tengas una enfermedad pre-existeste y además vas a poder chequear si hay incompatibilidades entre ellos</p>
                     </div>
-                    <div class="col-md-6 wow animate__animated animate__slideInRight">
+                    <div class="col-md-6 wow animate__animated animate__slideInRight" id="foto-farma">
                         <figure class="figure">
                             <img src="https://cdn.aarp.net/content/dam/aarp/health/drugs_supplements/2020/03/1140-pharmacist-patient-esp.imgcache.rev.web.700.399.jpg" class="img-fluid" alt="farmaceutico hablando">
                         </figure>    
@@ -78,14 +78,15 @@
 
                 <!-- Formulario de Incompatibilidades-->
                 <section class="row justify-content-center align-items-center my-8 mt-4">
-                    <div>
-                        <h2 class="title2">Medicheck - Incompatibilidades</h2>
-                        
-                        <img class="rounded mx-auto d-block logo-incompatibilidad" src="Imagenes/Icon incompat.png" alt="logo Incompatibilidades">
-                    </div>   
+                      
 
-                    <div class="col-md-12">
-                        <form action="#" method="GET"  id="form-incompatibilidad" class="formulario">
+                    <div class="col-md-12" id="form-incompatibilidad">
+                        <div>
+                            <h2 class="title2">Medicheck - Incompatibilidades</h2>
+                            
+                            <img class="rounded mx-auto d-block logo-incompatibilidad" src="Imagenes/Icon incompat.png" alt="logo Incompatibilidades">
+                        </div> 
+                        <form action="#" method="GET"   class="formulario">
                             <h3>Chequeá la incompatibilidad de un medicamento:</h3>
                             <label for="nombre">Nombre y Apellido: </label>
                             <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" id="input-nombre" required> 
@@ -179,13 +180,13 @@
         </footer>
         
         <!-- Script Simulador -->
-        <script src="js/index.js"></script>
+        <script type='module' src="js/index.js"></script>
 
-        <!--Script WOW-->
+        <!--Script WOW
         <script src="js/wow.min.js"></script>
         <script>
         new WOW().init();
-        </script>
+        </script>-->
 
         <!-- Script Bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>

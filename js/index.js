@@ -1,3 +1,11 @@
+//Efectos
+import {fadeLogo, hola1, slideFoto, slideIncompatibilidad, slideParrafo} from "./efectos.js"
+
+fadeLogo()
+slideParrafo()
+slideFoto()
+slideFoms()
+
 //Mensajes de Alerta
 
 const messages = {
@@ -107,3 +115,7 @@ $("#form-incompatibilidad").on('submit', (event) => {
 $("#menu-button").on('click', ()=> {
     $("#menu-bar").toggleClass("menu-hide")
 })
+
+hola1 ()
+
+
