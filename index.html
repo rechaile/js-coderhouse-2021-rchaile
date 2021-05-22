@@ -26,29 +26,28 @@
     </head>
 
     <body>
-        <header>
+        <header class="container-fluid">
             <!-- Menu Navbar -->
-            <nav class="navbar navbar-expand-lg container">
-                <div class="col d-flex justify-content-start">
-                    <a class="navbar-brand col-10" href="#">Medicheck</a>
-                    
-                    <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span><i class="fa fa-bars"></i></span>
-                    </button>
+            <nav class="row">
+                <div class="col-8 col-md-4">
+                    <a class="navbar-brand" href="#">Medicheck</a>
                 </div>                        
                 
-            
-                <div class="col-12 d-flex">
-                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                        <div class="navbar-nav justify-content-start">
-                            <a class="nav-link" href="#form-incompatibilidad">Incompatibilidades</a>
-                            <a class="nav-link" href="#form-interaccion">Interacciones</a>
-                            <a class="nav-link" href="#">Quiénes somos</a>
-                            <a class="nav-link" href="#">Ayuda</a>
-                        </div>
-                    </div>
-                </div>  
+               
+                <button type="button" class="col-4"  id="menu-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+                
+                
+                <div class="col-12 col-md-8 cols-col-3 menu-hide menu-show" id="menu-bar">
+                    <a class="nav-item col-4 col-md-4" href="#form-incompatibilidad">Incompatibilidades</a>
+                    <a class="nav-item col-4 col-md-4" href="#form-interaccion">Interacciones</a>
+                    <a class="nav-item col-4 col-md-4" href="#">Ayuda</a>
+                </div>
             </nav>
+            
+                
+           
         </header>
         
         <main id='contenedor-simulador'>

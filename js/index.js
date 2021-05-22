@@ -102,4 +102,8 @@ $("#form-incompatibilidad").on('submit', (event) => {
 
     cerrarVentana()   
 
-    
+//Abrir y cerrar menu
+
+$("#menu-button").on('click', ()=> {
+    $("#menu-bar").toggleClass("menu-hide")
+})

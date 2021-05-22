@@ -61,13 +61,39 @@ p {
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
-    padding: 16px;
+    padding: 48px;
+    margin:16px;
     text-align: start;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
 
 }
 
-.nav-link {
+.nav-item {
+    color: #000000;
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    }
+
+.nav-item:hover {
+    color: #02754C;
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    }
+
+#menu-button {
     color: #000000;
     font-style: normal;
     font-weight: 900;
@@ -75,7 +101,17 @@ p {
     font-size: 1rem;
     padding: 16px;
     text-align: end;
-    }
+    background-color: #ffffff;
+    border: none;
+    display: none;
+}
+
+.menu-show {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 /**Estilos del Main Formulario de Contacto**/
 
@@ -301,5 +337,55 @@ label {
         color: white;
         padding: 16px;
         border-radius: 8px;
-        margin: 16px 5vw 64px 5vw ;}
+        margin: 16px 5vw 64px 5vw ;
     }
+
+    #menu-button {
+        color: #000000;
+        font-style: normal;
+        font-weight: 900;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        padding: 8px;
+        background-color: #ffffff;
+        border: none;
+        display: block;
+    }
+
+    .menu-show {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    .menu-hide {
+       display:none;        
+    }
+    
+    .nav-item {
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 900;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        padding: 8px;
+        text-align: right;
+        text-decoration: none;
+        background-color: #02754C;
+        
+        }
+    
+    .nav-item:hover {
+        color: #ffd900;
+        font-style: normal;
+        font-weight: 900;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        padding: 8px;
+        text-align: right;
+        text-decoration: none;
+        background-color: #02754C;
+        
+        
+        }
+}
