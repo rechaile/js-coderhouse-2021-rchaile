@@ -106,14 +106,23 @@
                             <label for="medicamento1">Ingresá el medicamento que querés consultar:</label>
                             <input type="text" name="medicamento1" placeholder="ej: betametasona" id="medicamento1" required>
                         
-                            <label for="medicamento2">Ingresá otro medicamento que querés consultar: </label>
-                            <input type="text" name="medicamento2" placeholder="ej: diclofenac" id="medicamento2" required>
+                            <label for="fuente">Ingresá la fuente consultar: </label>
+                            <input type="text" name="fuente" placeholder="ej: DrugBank" id="fuente" required>
 
                             <input id="btn-interaccion" class="button" type="submit" value="Chequear">
                         </form>
                     </div>
                 </section>
+
+                <section class="row justify-content-center align-items-center my-8 mt-4">
+                    <div class="col-6 counter">
+                        <p id="covidCounter">texto</p>
+                        <button id="btnActualizar"></button>
+                    </div>
+                </section>
             </div>
+
+            
 
             <div class='modal'id='alert-incompatibilidad'>
                 <div id='modal-incompatibilidad'>
@@ -171,6 +180,8 @@
         
         <!-- Script Simulador -->
         <script type='module' src="js/index.js"></script>
+
+        <script src="js/ajax.js"></script>
 
         <!-- Script Bootstrap-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
