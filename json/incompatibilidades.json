@@ -1,0 +1,76 @@
+[
+{
+    "id":1, 
+    "enfermedad":"diabetes", 
+    "medicamento":"diclofenac", 
+    "mensajeAlerta":"Precaución: El consumo de antiinflamatorios de forma crónica no está recomendado en personas diabéticas porque puede perjudicar la función renal. Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+    },
+{     
+    "id":2, 
+    "enfermedad":"diabetes", 
+    "medicamento": "betametasona",
+    "mensajeAlerta": "¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos"
+    },
+{   
+    "id":3, 
+    "enfermedad":"diabetes", 
+    "medicamento":"furosemida",
+    "mensajeAlerta": "¡Cuidado! el consumo de diuréticos como la furosemida en personas diabéticas puede causar desequilibrios peligrosos en la hidratación y llevar al colapso. Esta contrainidicado en pacientes diabéticos"  
+    },   
+{   
+    "id": 4,
+    "enfermedad":"hipertension",
+    "medicamento":"diclofenac",
+    "mensajeAlerta":"¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente hipertenso.  Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+    },
+{            
+    "id": 5,
+    "enfermedad":"hipertension",
+    "medicamento":"betametasona",
+    "mensajeAlerta":"Precaución: El consumo de corticoides de forma crónica no está recomendado en personas hipertensas porque puede perjudicar la función renal del paciente"
+    },
+{
+    "id": 6,
+    "enfermedad":"hipertension",
+    "medicamento":"sal",
+    "mensajeAlerta":"¡Cuidado! El consumo en exceso de sal puede contribuir a la suba de presión del paciente hipertenso. Trate de disminuir su consumo, y consulte a su médico sobre hábitos nutricionales que puedan ayudarle a adaptar su consumo de sal en las comidas u otras alternativas"
+    },
+{
+    "id": 7,
+    "enfermedad":"insuficiencia cardiaca",
+    "medicamento":"diclofenac",
+    "mensajeAlerta":"¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente y a un aumento en la gravedad de la insuficiencia.  Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+    },
+{   
+    "id": 8,
+    "enfermedad":"insuficiencia cardiaca",
+    "medicamento":"itraconazol",
+    "mensajeAlerta":"¡Cuidado! El itraconazol y otros antifúngicos puede provocar aumento de la insuficiencia cardíaca del paciente. Consulte con su médico para evaluar utilizar otras alternativas para tratar la infección por hongos"
+    },
+{   
+    "id": 9,
+    "enfermedad":"insuficiencia cardiaca",
+    "medicamento":"carbamazepina",
+    "mensajeAlerta":"¡Cuidado! El consumo carbamazepina debe ser administrada únicamente bajo supervisión médica. El uso de este medicamento así como el otros antidepresivos y antipsicóticos, pueden agravar la situación de insuficiencia y provocar aumento de las arritmias cardíacas."
+},
+{
+    "id": 10,
+    "enfermedad":"insuficiencia renal",
+    "medicamento":"diclofenac",
+    "mensajeAlerta":"¡Cuidado! El diclofenac sódico puede contribuir a la disfunción plaquetaria, alterando la cicatrización e incrementar el riesgo de sangrado gastrointestinal. Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+    },
+{
+    "id": 11,
+    "enfermedad":"insuficiencia renal",
+    "medicamento": "pseudoefedrina",
+    "mensajeAlerta":"¡Cuidado! La pseudoefedrina puede provocar aumento de la insuficiencia renal por aumento de la presión areterial del paciente. Consulte con su médico para evaluar utilizar otras alternativas descongestivas"
+    },
+            
+{
+    "id": 10,
+    "enfermedad":"insuficiencia renal",
+    "medicamento": "gentamicina",
+    "mensajeAlerta":"¡Cuidado! El consumo por períodos prolongados de gentamicino y otros aminoglucósidos se asocian con toxicidad renal. Pueden agravar la situación de insuficiencia y provocar daño irreversible. Consulte con su médico para utilizar otras alternativas antibióticas "
+    }
+
+]

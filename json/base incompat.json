@@ -1,0 +1,87 @@
+[
+{
+    "id":1, 
+    "enfermedad":"diabetes", 
+    "contraindicacion":{ 
+        "medicamentos":{
+            "diclofenac":{
+                "mensajeAlerta": "Precaución: El consumo de antiinflamatorios de forma crónica no está recomendado en personas diabéticas porque puede perjudicar la función renal. Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+                },
+            "betametasona": {
+                "mensajeAlerta": "¡Cuidado! el consumo de corticoides en personas diabéticas puede causar desequilibrios peligrosos en la glucemia. Esta contrainidicado en pacientes diabéticos"
+                },
+            "furosemida": {
+                "mensajeAlerta": "¡Cuidado! el consumo de diuréticos como la furosemida en personas diabéticas puede causar desequilibrios peligrosos en la hidratación y llevar al colapso. Esta contrainidicado en pacientes diabéticos"
+                }
+            }
+        }
+    },
+{   
+    "id": 2,
+    "enfermedad":"hipertension",
+        "contraindicacion":{
+            "medicamentos":{
+                "diclofenac":{
+                    "mensajeAlerta":"¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente hipertenso.  Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+                },
+                "betametasona":{
+                    "mensajeAlerta":"Precaución: El consumo de corticoides de forma crónica no está recomendado en personas hipertensas porque puede perjudicar la función renal del paciente"
+                },
+                "sal":{
+                    "mensajeAlerta":"¡Cuidado! El consumo en exceso de sal puede contribuir a la suba de presión del paciente hipertenso. Trate de disminuir su consumo, y consulte a su médico sobre hábitos nutricionales que puedan ayudarle a adaptar su consumo de sal en las comidas u otras alternativas"
+                }
+            }
+        }
+    },
+{
+    "id": 3,
+    "enfermedad":"insuficiencia cardiaca",
+        "contraindicacion":{
+            "medicamentos":{
+                "diclofenac":{
+                    "mensajeAlerta":"¡Cuidado! El diclofenac sódico puede contribuir a la suba de presión del paciente y a un aumento en la gravedad de la insuficiencia.  Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+                },
+                "itraconazol":{
+                    "mensajeAlerta":"¡Cuidado! El itraconazol y otros antifúngicos puede provocar aumento de la insuficiencia cardíaca del paciente. Consulte con su médico para evaluar utilizar otras alternativas para tratar la infección por hongos"
+                },
+                "carbamazepina":{
+                    "mensajeAlerta":"¡Cuidado! El consumo carbamazepina debe ser administrada únicamente bajo supervisión médica. El uso de este medicamento así como el otros antidepresivos y antipsicóticos, pueden agravar la situación de insuficiencia y provocar aumento de las arritmias cardíacas."
+                }
+            }
+        }
+},
+{
+    "id": 4,
+    "enfermedad":"insuficiencia renal",
+        "contraindicacion":{
+            "medicamentos":{
+                "diclofenac":{
+                    "mensajeAlerta":"¡Cuidado! El diclofenac sódico puede contribuir a la disfunción plaquetaria, alterando la cicatrización e incrementar el riesgo de sangrado gastrointestinal. Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+                },
+                "pseudoefedrina":{
+                    "mensajeAlerta":"¡Cuidado! La pseudoefedrina puede provocar aumento de la insuficiencia renal por aumento de la presión areterial del paciente. Consulte con su médico para evaluar utilizar otras alternativas descongestivas"
+                },
+                "gentamicina":{
+                    "mensajeAlerta":"¡Cuidado! El consumo por períodos prolongados de gentamicino y otros aminoglucósidos se asocian con toxicidad renal. Pueden agravar la situación de insuficiencia y provocar daño irreversible. Consulte con su médico para utilizar otras alternativas antibióticas "
+                }
+            }
+        }
+},
+{
+    "id": 5,
+    "enfermedad":"asma",
+        "contraindicacion":{
+            "medicamentos":{
+                "ibuprofeno":{
+                    "mensajeAlerta":"¡Cuidado! El ibuprofeno así como otros antiinflamatorios no esteroideos como el naproxeno, pueden empeorar el asma. Consulte con su médico para utilizar otras alternativas antiinflamatorias"
+                },
+                "atenolol":{
+                    "mensajeAlerta":"¡Cuidado! El atenolol así como otros betabloqueantes que se usan para controlar la presión arterial pueden empeorar el asma. Consulte con su médico para evaluar utilizar otras alternativas"
+                },
+                "diclofenac":{
+                    "mensajeAlerta":"¡Cuidado! El diclofenac así como otros antiinflamatorios no esteroideos como el naproxeno, pueden empeorar el asma. Consulte con su médico para utilizar otras alternativas antiinflamatorias "
+                }
+            }
+        }
+}
+]

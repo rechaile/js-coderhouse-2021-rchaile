@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "med1":"diclofenac",
+        "med2":"betametasona",
+        "mensajeAlerta":"El uso de betametasona junto con diclofenac puede aumentar el riesgo de efectos secundarios en el tracto gastrointestinal como inflamación, sangrado, ulceración y, en raras ocasiones, perforación. La perforación gastrointestinal es una afección potencialmente mortal y una emergencia médica en la que se forma un orificio a lo largo del estómago o el intestino. Debe tomar estos medicamentos con alimentos para reducir el riesgo. Hable con su médico si tiene alguna pregunta o inquietud. Su médico puede recetarle alternativas que no interactúen, o es posible que necesite un ajuste de dosis o un control más frecuente para usar ambos medicamentos de manera segura. Su médico también puede recomendarle medicamentos para ayudar a proteger el estómago y el intestino si tiene un alto riesgo de desarrollar complicaciones gastrointestinales graves. Debe buscar atención médica inmediata si experimenta algún sangrado o hematoma inusual, o si tiene otros signos y síntomas de sangrado como mareos; aturdimiento; heces rojas o negras; toser o vomitar sangre fresca o seca que parece café molido; dolor de cabeza intenso; y debilidad. Es importante que informe a su médico sobre todos los demás medicamentos que usa, incluidas las vitaminas y hierbas que pueda tomar. No deje de usar ningún medicamento sin antes hablar con su médico." 
+    },
+    
+    {
+        "id": 2,
+        "med1":"diclofenac",
+        "med2":"atenolol",
+        "mensajeAlerta":"Si usa atenolol para el tratamiento de la presión arterial alta, hable con su médico antes de usarlo junto con diclofenac. La combinación de estos medicamentos puede reducir los efectos del atenolol para la disminución de la presión arterial, especialmente si usa diclofenac con frecuencia o con regularidad (por ejemplo, para tratar la artritis o el dolor crónico). Es posible que necesite un ajuste de dosis o un control más frecuente por parte de su médico para usar ambos medicamentos de manera segura. Es importante que informe a su médico sobre todos los demás medicamentos que usa, incluidas las vitaminas y hierbas. No deje de usar ningún medicamento sin antes hablar con su médico." 
+    },
+    
+    {
+        "id": 3,
+        "med1":"furosemida",
+        "med2":"betametasona",
+        "mensajeAlerta":"Antes de usar betametasona, informe a su médico si también usa furosemida. Es posible que necesite un ajuste de dosis o pruebas especiales para poder tomar ambos medicamentos juntos de manera segura. Esta combinación puede causar dolores o calambres musculares, pérdida de apetito, debilidad, mareos o confusión. Si toma ambos medicamentos juntos, informe a su médico si presenta alguno de estos síntomas. Es importante que informe a su médico sobre todos los demás medicamentos que usa, incluidas las vitaminas y hierbas. No deje de usar ningún medicamento sin antes hablar con su médico." 
+    },
+    
+    {
+        "id": 4,
+        "med1":"diclofenac",
+        "med2":"carbamazepina",
+        "mensajeAlerta":"La carbamazepina puede reducir los niveles sanguíneos de diclofenac, lo que puede hacer que el medicamento sea menos efectivo para tratar su afección. Comuníquese con su médico si sus síntomas empeoran o su condición cambia. Su médico puede recetarle alternativas que no interactúen, o es posible que necesite un ajuste de dosis o un control más frecuente para usar ambos medicamentos de manera segura. Es importante que informe a su médico sobre todos los demás medicamentos que usa, incluidas las vitaminas y hierbas. No deje de usar ningún medicamento sin antes hablar con su médico." 
+    },
+    
+    {
+        "id": 5,
+        "med1":"diclofenac",
+        "med2":"fluconazol",
+        "mensajeAlerta":"El fluconazol puede aumentar los niveles sanguíneos y los efectos del diclofenaco. Es posible que necesite un ajuste de dosis o un control más frecuente por parte de su médico para usar ambos medicamentos de manera segura. Comuníquese con su médico si su condición cambia o si experimenta un aumento de los efectos secundarios. Es importante que informe a su médico sobre todos los demás medicamentos que usa, incluidas las vitaminas y las hierbas. No deje de usar ningún medicamento sin antes hablar con su médico." 
+    }
+]

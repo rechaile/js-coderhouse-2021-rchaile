@@ -1,6 +1,6 @@
 
 import {fadeLogo, slideFoto, slideForms, slideParrafo, abrirMenu} from "./efectos.js"
-import {messages} from "./mensajes.js"
+//import {messages} from "./mensajes.js"
 
 //Animaciones
 fadeLogo()
@@ -39,10 +39,50 @@ const cerrarVentana = () => {
     })
 }
    
+ //Valores de inputs
+
+ //const nombre = $("#input-nombre").val().toLowerCase()
+       
+ const enfermedad = $("#input-enfermedad").val().toLowerCase()
+ 
+ const medicamento = $("#input-medicamento").val().toLowerCase()
+
+ let incompatibilidad = []
+
+
+ 
+const traerDatosJson = async ()=> {
+    let resp = await fetch('./json/incompatibilidades.json')
+    const data = await resp.json()
+
+    incompatibilidad = data
+    console.log (incompatibilidad.filter(item => item = item.contraindicacion.medicamentos.betametasona))
+}
+
+traerDatosJson()
+
 
 //Función de Análisis de Incompatibilidad
 
-function incompatibilidades(enfermedad, medicamento) {
+const analisisIncompat = () => {
+    if (enfermedad === incompatibilidad.contraindicacion.enfermedad || medicamento === incompatibilidad.contradindicacion.medicamento) {
+        $("#alert-message").text(mensajeAlerta)
+    } else { $("#alert-message").text("No se han encontrado incompatibilidades")
+
+    }
+}
+
+$("#form-incompatibilidad").on('submit', (event) => {
+    event.preventDefault()
+    analisisIncompat (enfermedad, medicamento)
+    verModal()
+},
+
+cerrarVentana()    
+   
+
+
+/**function incompatibilidades(enfermedad, medicamento) {
 
     if (enfermedad === 'diabetes' && medicamento === 'betametasona') {
         $("#alert-message").text(messages.diabeBeta)
@@ -91,8 +131,4 @@ $("#form-incompatibilidad").on('submit', (event) => {
     $("#input-enfermedad").val('ej: diabetes') 
     $("#input-medicamento").val('ej: diclofenac')
 
-    })
-
-    cerrarVentana()   
-
-
+    })**/)
