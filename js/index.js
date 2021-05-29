@@ -43,46 +43,49 @@ const cerrarVentana = () => {
 
  //const nombre = $("#input-nombre").val().toLowerCase()
        
- const enfermedad = $("#input-enfermedad").val().toLowerCase()
- 
- const medicamento = $("#input-medicamento").val().toLowerCase()
-
- let incompatibilidad = []
+let incompatibilidad = []
 
 
- 
-const traerDatosJson = async ()=> {
+
+const analisisIncompat = async ()=> {
     let resp = await fetch('./json/incompatibilidades.json')
     const data = await resp.json()
-
     incompatibilidad = data
-    console.log (incompatibilidad.filter(item => item = item.contraindicacion.medicamentos.betametasona))
+
+    const enfermedad = $("#enfermedad").val()
+    const medicamento = $("#medicamento").val()
+    
+    let filtrado = incompatibilidad.filter(el => el.enfermedad === enfermedad && el.medicamento === medicamento)
+    const alerta = ()=> $("#alert-message").text(resultAlerta)
+    const resultAlerta = filtrado.map (el => el.mensajeAlerta)
+    
+    $("#form-incompatibilidad").on('submit', (event) => {
+        
+        event.preventDefault()
+        alerta()
+        verModal()
+        
+        $("#input-nombre").val('Ingresa tu nombre completo') 
+        $("#input-enfermedad").val('ej: diabetes') 
+        $("#input-medicamento").val('ej: diclofenac')
+        }
+    )
 }
 
-traerDatosJson()
+
+analisisIncompat()
+
+cerrarVentana()  
 
 
 //Función de Análisis de Incompatibilidad
 
-const analisisIncompat = () => {
-    if (enfermedad === incompatibilidad.contraindicacion.enfermedad || medicamento === incompatibilidad.contradindicacion.medicamento) {
-        $("#alert-message").text(mensajeAlerta)
-    } else { $("#alert-message").text("No se han encontrado incompatibilidades")
 
-    }
-}
 
-$("#form-incompatibilidad").on('submit', (event) => {
-    event.preventDefault()
-    analisisIncompat (enfermedad, medicamento)
-    verModal()
-},
-
-cerrarVentana()    
    
 
 
-/**function incompatibilidades(enfermedad, medicamento) {
+/** function incompatibilidades(enfermedad, medicamento) {
 
     if (enfermedad === 'diabetes' && medicamento === 'betametasona') {
         $("#alert-message").text(messages.diabeBeta)
@@ -111,17 +114,17 @@ $("#form-incompatibilidad").on('submit', (event) => {
     
     //Valores de inputs
 
-    const nombre = $("#input-nombre").val().toLowerCase()
+    //const nombre = $("#input-nombre").val().toLowerCase()
        
     const enfermedad = $("#input-enfermedad").val().toLowerCase()
     
     const medicamento = $("#input-medicamento").val().toLowerCase()
   
     //Objeto consulta
-    const consulta = new Consulta (nombre, enfermedad, medicamento)
-    create (consulta)
+    //const consulta = new Consulta (nombre, enfermedad, medicamento)
+    //create (consulta)
 
-    localStorage.setItem('consultas', JSON.stringify(consultas))
+    //localStorage.setItem('consultas', JSON.stringify(consultas))
 
     incompatibilidades (enfermedad, medicamento)
 
@@ -131,4 +134,6 @@ $("#form-incompatibilidad").on('submit', (event) => {
     $("#input-enfermedad").val('ej: diabetes') 
     $("#input-medicamento").val('ej: diclofenac')
 
-    })**/)
+    })
+
+    cerrarVentana()**/    
