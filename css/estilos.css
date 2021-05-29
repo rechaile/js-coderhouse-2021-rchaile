@@ -296,12 +296,10 @@ label {
     visibility: visible!important;
 }
 
-
 #modal-incompatibilidad {
     position: relative;
     background-color: #f0fff0;
     border-radius: 16px;
-    min-width: 500px;
     padding: 20px;
     margin-top: -20vh;
     margin-left: 60vh;
@@ -314,7 +312,7 @@ label {
     font-style: normal;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
+    font-size: 14px;
     padding: 16px;
     text-align:left;
 }
@@ -328,11 +326,36 @@ label {
     padding: 16px;
     text-align:left;
 }
+#modal-body {
+    height: 180px;
+    width: auto;
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    }
+    
+::-webkit-scrollbar-track {
+    background: #f0fff0;
+    }
+
+::-webkit-scrollbar-corner {
+    background: #f0fff0;
+    }
+
+::-webkit-scrollbar-thumb {
+    background: #02754C; 
+    }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #02291B;
+    }
+
 
 #modal-cerrar {
     background-color: #f0fff0;
     border: none;
-}
+    }
 
 /**Estilos del footer**/
 
@@ -386,7 +409,7 @@ label {
 .pie a{
     margin:0;
     padding:0;
-
+    
 }
 
 /** Animaciones**/
@@ -456,9 +479,26 @@ label {
         padding: 8px;
         text-align: right;
         text-decoration: none;
-        background-color: #02754C;
-        
-        
+        background-color: #02754C;}
+
+        #modal-incompatibilidad p {
+            color: #000000;
+            font-style: normal;
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            padding: 16px;
+            text-align:left;
         }
-   
+
+        #modal-incompatibilidad h3 {
+            color: #02291B;
+            font-style: normal;
+            font-weight: 900;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            padding: 16px;
+            text-align:left;
+        }
+               
 }

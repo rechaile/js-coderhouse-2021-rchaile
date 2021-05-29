@@ -34,7 +34,7 @@
                 
                 <div class="col-12 col-md-8 cols-col-3 menu-hide menu-show" id="menu-bar">
                     <a class="nav-item col-6 col-md-4" href="#form-incompatibilidad">Incompatibilidades</a>
-                    <a class="nav-item col-6 col-md-4" href="#form-interaccion">Interacciones</a>
+                    <a class="nav-item col-6 col-md-4" href="#seccion-interaccion">Interacciones</a>
                     <a class="nav-item col-6 col-md-4" href="#">Ayuda</a>
                 </div>
             </nav>
@@ -78,9 +78,7 @@
                         </div> 
                         <form action="#" method="GET"   class="formulario">
                             <h3>Chequeá la incompatibilidad de un medicamento:</h3>
-                            <!--<label for="nombre">Nombre y Apellido: </label>
-                            <input type="text" name="nombre" placeholder="Ingresa tu nombre completo" id="input-nombre" required> --> 
-                        
+                                                    
                             <label for="enfermedad">Ingresá la enfermedad que querés consultar:</label>
                             <input type="text" name="enfermedad" placeholder="ej: diabetes" id="enfermedad" required>
                         
@@ -92,7 +90,7 @@
                     </div>
 
                 <!-- Formulario de Interacciones -->
-                    <div>
+                    <div id="seccion-interaccion">
                         <h2 class="title2">Medicheck - Interacciones</h2>
                         
                         <img class="rounded mx-auto d-block logo-interaccion" src="Imagenes/Icon interaccion.png" alt="logo Interacciones">
@@ -103,8 +101,11 @@
                         <form action="#" method="GET"  id="form-interaccion" class="formulario">
                             <h3>Chequeá las interacciones de un medicamentos:</h3>
                                                 
-                            <label for="medicamento1">Ingresá el medicamento que querés consultar:</label>
+                            <label for="medicamento1">Ingresá un medicamento:</label>
                             <input type="text" name="medicamento1" placeholder="ej: betametasona" id="medicamento1" required>
+                        
+                            <label for="medicamento2">Ingresá un segundo medicamento:</label>
+                            <input type="text" name="medicamento2" placeholder="ej: betametasona" id="medicamento2" required>
                         
                             <input id="btn-interaccion" class="button" type="submit" value="Chequear">
                         </form>
@@ -123,10 +124,12 @@
             
 
             <div class='modal'id='alert-incompatibilidad'>
-                <div id='modal-incompatibilidad'>
+                <div id='modal-incompatibilidad' class="col-8 col-md-6">
                     <div class='row'>
-                        <h3 class='modal-title col-md-10'>¡Alerta!</h3>
-                        <button class='col-md-2' id='modal-cerrar'><i class="fa fa-times-circle fa-2x"></i></button>
+                        <h3 class='modal-title col-6 col-md-10 '>¡Alerta!</h3>
+                        <button class='col-6 col-md-2 text-end' id='modal-cerrar'>
+                            <i class="fa fa-times-circle fa-2x"></i>
+                        </button>
                     </div>
                 
                     <div id='modal-body'>
@@ -165,15 +168,14 @@
                             <a href="#" class="col-6">
                                 <i class="fa fa-facebook  ml-2"></i>
                             </a>
-                            
                             <a href="#" class="col-6">
                                 <i class="fa fa-instagram  ml-2"></i>
                             </a>
                         </div>
                         <p>Redes Sociales</p>
                     </div>
-                 
-            </div>
+                </div>
+            </div>    
         </footer>
         
         <!-- Script Simulador -->
