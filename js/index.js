@@ -67,7 +67,7 @@ const stratInterac = () => {
         const medicamento1 = $("#medicamento1").val().toLowerCase()
         const medicamento2 = $("#medicamento2").val().toLowerCase()
 
-        let findInterac = interaccion.filter(el => el.med1 === medicamento1 || medicamento2 && el.med2 === medicamento2 || medicamento1)
+        let findInterac = interaccion.filter(el => el.med1 === medicamento1 && el.med2 === medicamento2)
         const alerta = ()=> $("#alert-message").text(resultAlerta)
         const resultAlerta = findInterac.map (el => el.mensajeAlerta)
         
