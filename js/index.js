@@ -74,8 +74,8 @@ const stratInterac = () => {
         alerta()
         verModal()
         
-        $("#medicamento1").val('ej: diclofenac') 
-        $("#medicamento2").val('ej: betametasona')
+        $("#medicamento1").val('') 
+        $("#medicamento2").val('')
         }
     )
 }
