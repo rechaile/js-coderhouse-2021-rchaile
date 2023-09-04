@@ -33,7 +33,7 @@ const traerJSONincompat = async () => {
 }
 
 const traerJSONinterac = async () => {
-    let resp = await fetch('https://api.drugbank.com/v4/interactions?limit=100')
+    let resp = await fetch('./json/interacciones.json')
     if (resp.status === 200) {
         const data = await resp.json()
         interaccion = data
@@ -69,7 +69,7 @@ const stratInterac = () => {
         const medicamento1 = $("#medicamento1").val().toLowerCase()
         const medicamento2 = $("#medicamento2").val().toLowerCase()
 
-        let findInterac = interaccion.get(medicamento1, medicamento2)
+        let findInterac = interaccion.filter(el => (el.med1.toLowerCase() === medicamento1.toLowerCase() && el.med2.toLowerCase() === medicamento2.toLowerCase()) || (el.med1.toLowerCase() === medicamento2.toLowerCase() && el.med2.toLowerCase() === medicamento1.toLowerCase()))
         const alerta = ()=> $("#alert-message").text(resultAlerta)
         const resultAlerta = findInterac.map (el => el.mensajeAlerta)
         
