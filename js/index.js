@@ -20,22 +20,24 @@ const cerrarVentana = () => {
     )
 }
 
-// Funciones Simulador
-
 let incompatibilidad = []
 let interaccion = []
 
 //Interacción Base de datos
-const traerJSONincompat = async ()=> {
+const traerJSONincompat = async () => {
     let resp = await fetch('./json/incompatibilidades.json')
-    const data = await resp.json()
-    incompatibilidad = data
+    if (resp.status === 200) {
+        const data = await resp.json()
+        incompatibilidad = data
+    }
 }
 
-const traerJSONinterac = async ()=> {
+const traerJSONinterac = async () => {
     let resp = await fetch('./json/interacciones.json')
-    const data = await resp.json()
-    interaccion = data
+    if (resp.status === 200) {
+        const data = await resp.json()
+        interaccion = data
+    }
 }
 
 //Estrategias de análisis
@@ -46,7 +48,7 @@ const stratIncompat = () => {
         const enfermedad = $("#enfermedad").val().toLowerCase()
         const medicamento = $("#medicamento").val().toLowerCase()
 
-        let findIncompat = incompatibilidad.filter(el => el.enfermedad === enfermedad && el.medicamento === medicamento)
+        let findIncompat = incompatibilidad.filter(el => el.enfermedad.toLowerCase() === enfermedad.toLowerCase() && el.medicamento.toLowerCase() === medicamento.toLowerCase())
         const alerta = ()=> $("#alert-message").text(resultAlerta)
         const resultAlerta = findIncompat.map (el => el.mensajeAlerta)
         
@@ -67,7 +69,7 @@ const stratInterac = () => {
         const medicamento1 = $("#medicamento1").val().toLowerCase()
         const medicamento2 = $("#medicamento2").val().toLowerCase()
 
-        let findInterac = interaccion.filter(el => el.med1 === medicamento1 && el.med2 === medicamento2 || el.med1 === medicamento2 && el.med2 === medicamento1)
+        let findInterac = interaccion.filter(el => (el.med1.toLowerCase() === medicamento1.toLowerCase() && el.med2.toLowerCase() === medicamento2.toLowerCase()) || (el.med1.toLowerCase() === medicamento2.toLowerCase() && el.med2.toLowerCase() === medicamento1.toLowerCase()))
         const alerta = ()=> $("#alert-message").text(resultAlerta)
         const resultAlerta = findInterac.map (el => el.mensajeAlerta)
         
@@ -81,7 +83,7 @@ const stratInterac = () => {
 }
 
 //Análisis
-const analisisIncompat = ()=> {
+const analisisIncompat = () => {
     traerJSONincompat()
     stratIncompat()
     }
